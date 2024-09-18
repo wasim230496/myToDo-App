@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        body{
+            background-color: rgb(148, 209, 209);
+            padding-top: 20px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            }
+            
+        .addtask{
+            display: flex;
+
+            justify-content: center;
+            
+            }
+
+            .input{
+                width: 400px;
+                padding: 10px;
+                font-size: 18px;
+
+                border-radius: 5px;
+                margin: 5px;
+
+        }
+        .tasklist{
+            width: 800px;
+            /* display: flex;
+            justify-content: centera;
+            align-items: center; */
+            flex-direction: column;
+            background-color: rgb(62, 235, 62);
+            color: rgb(0, 0, 0);
+            margin: 5px;
+            padding: 10px;
+
+        }
+        .tasklist ol {
+            /* list-style: none; */
+            display: inline-block;
+            margin: 10px;
+        }
+        .btn{
+            width: 100px;
+            height: 30px;
+            border-radius: 25px;
+            margin: 5px;
+            position: relative;
+            cursor: pointer;
+            float: right;
+}
+        .btn:hover{
+            background-color: skyblue;
+            transform: scale(1.1);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="addtask">
+            
+                    <textarea name="enter" id="userInput" placeholder="Enter Your Task" class="input"></textarea>
+                    <button class="btn" id="submitButton" >Add Task</button>
+
+        </div>
+        <h1>Task list</h1>
+        <div  id="tasks"></div>
+        
+
+    </div>
+
+      <script src="toDoList.js"></script>
+</body>
+</html>
