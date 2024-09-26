@@ -1,5 +1,5 @@
 function addTask(){
-    let container = document.getElementById("tasks");
+        let container = document.getElementById("tasks");
     
         let input = document.getElementById("userInput").value;
         // taskText.innerHTML = input;  
@@ -12,33 +12,33 @@ function addTask(){
         let taskBox = document.createElement('div');
             taskBox.className = "tasklist";
             
-        let taskText = document.createElement('ol');
+        let taskText = document.createElement('ul');
         // taskText.innerHTML = input;  
-        taskText.id = "task";// my line
+        // taskText.id = "task";// my line
         
         let taskTextli = document.createElement('li');
         taskTextli.innerHTML = input;
-
         taskText.appendChild(taskTextli);
 
+        
+        
+        
+        // let task = document.getElementById("task");// my lines
+        // task.innerHTML=input
+        
+        let completeButton = document.createElement("button");
+        completeButton.className ="btn"; 
+        completeButton.innerHTML= "Complete"
 
-
-    // let task = document.getElementById("task");// my lines
-    // task.innerHTML=input
-
-    let completeButton = document.createElement("button");
-    completeButton.className ="btn"; 
-    completeButton.innerHTML= "Complete"
-
-    let deleteButton = document.createElement("button");
-    deleteButton.className ="btn"; 
-    deleteButton.innerHTML = "Delete"
+        let deleteButton = document.createElement("button");
+        deleteButton.className ="btn"; 
+        deleteButton.innerHTML = "Delete"
 
     taskBox.appendChild(taskText);
-    taskBox.appendChild(completeButton);
-    taskBox.appendChild(deleteButton);
+    taskText.appendChild(completeButton);
+    taskText.appendChild(deleteButton);
 
-    container.appendChild(taskBox)
+    container.appendChild(taskBox);
 
     document.getElementById("userInput").value = "";
 
