@@ -39,17 +39,20 @@
             justify-content: centera;
             align-items: center; */
             flex-direction: column;
-            background-color: rgb(62, 235, 62);
+            /* background-color: rgb(62, 235, 62); */
             color: rgb(0, 0, 0);
             margin: 5px;
             padding: 10px;
-
+            
         }
-        .tasklist ol {
+        .tasklist ul {
             /* list-style: none; */
-            display: inline-block;
+            list-style-type: disclosure-closed;
+            font-size: 35px;
+            background-color: chartreuse;
             margin: 10px;
         }
+        
         .btn{
             width: 100px;
             height: 30px;
@@ -68,15 +71,17 @@
     </style>
 </head>
 <body>
-    <div class="container">
+        <div class="container">
         <div class="addtask">
             
                     <textarea name="enter" id="userInput" placeholder="Enter Your Task" class="input"></textarea>
-                    <button class="btn" id="submitButton" >Add Task</button>
+                    <button class="btn" id="submitButton">Add Task</button>
 
         </div>
         <h1>Task list</h1>
-        <div  id="tasks"></div>
+        <div  class="tasklist" id="tasks">
+            
+        </div>
         
 
     </div>
